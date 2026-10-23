@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Profil Saya</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf2f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        #judul {
+            text-align: center;
+            color: #24527a;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #24527a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #163954;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 id="judul">Profil Saya</h1>
+
+        <p class="deskripsi">
+            Silakan isi formulir data diri berikut.
+        </p>
+
+        <form id="form-profil">
+
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama"
+                       class="form-control"
+                       placeholder="Masukkan nama lengkap" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nim">NIM</label>
+                <input type="text" id="nim" name="nim"
+                       class="form-control"
+                       placeholder="Masukkan NIM" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email"
+                       class="form-control"
+                       placeholder="Masukkan email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="jurusan">Jurusan</label>
+                <select id="jurusan" name="jurusan"
+                        class="form-control" required>
+                    <option value="">Pilih jurusan</option>
+                    <option value="Informatika">Informatika</option>
+                    <option value="Sistem Informasi">Sistem Informasi</option>
+                    <option value="Manajemen">Manajemen</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggal-lahir">Tanggal Lahir</label>
+                <input type="date" id="tanggal-lahir"
+                       name="tanggal-lahir"
+                       class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat</label>
+                <textarea id="alamat" name="alamat"
+                          class="form-control"
+                          placeholder="Masukkan alamat"
+                          rows="3" required></textarea>
+            </div>
+
+
+            <button type="submit" class="btn">
+                Simpan Profil
+            </button>
+
+        </form>
+
+    </div>
+
+    <script>
+        document.getElementById("form-profil")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+                alert("Formulir profil berhasil diisi!");
+            });
+    </script>
+
+</body>
+</html>
